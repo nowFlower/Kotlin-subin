@@ -67,3 +67,6 @@ fun checkNum(score : Int) {//: Unit { //문장으로 쓰였음
 // Expression vs Statement -> 값 : 문장의 느낌 
 //코틀린 함수는 Expression : Unit -> 리턴 값이 없더라도 Unit을 반환함
 //자바의 void의 경우 Statement
+
+
+//어우 뭐 오랜만에 보니까 뭐라는건지 모르겠네
