@@ -1,6 +1,18 @@
 package com.example.study_kotlin
 
 fun main() {
+    //Kotlin 입출력
+    print("값을 입력하세요\n")
+    val input = readLine()
+    print("입력한 값은 :$input")
+    //Kotlin은 타입 추론 언어이기 때문에
+    //타입에 따른 변수를 선언할 필요가 없음
+    //readLine 하나로 입력받고 그 값을 출력하면 됨
+
+    //public class main {
+        //public static void main(String[] args) {
+            //syso "Hello World")
+                //Kotlin 메인문 간결한거 보소?
     checkNum(1)
 
 }
