@@ -3,8 +3,14 @@ package com.example.study_kotlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.study_kotlin.databinding.ActivityMainBinding
 
 class SubActivity : AppCompatActivity() {
+    //전역단에 바인딩 객체를 선언
+    private var mBinding : ActivityMainBinding? = null
+    //null 체크 편의성을 위한 바인딩 변수 재선언
+    private val binding get() = mBinding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         //액티비티를 생성하게 되면 ()안에 있는 객채를 가지고
         //액티비티를 중단히게 되면 savedInstanceState 메서드를 호출하여 데이터를 임시저장
@@ -16,7 +22,8 @@ class SubActivity : AppCompatActivity() {
         //액티비티간 데이터를 주고 받을때 Bundle클래스를 사용해 데이터를 전송
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sub) // xml 화면 뷰를 연결
+        //setContentView(R.layout.activity_sub) // xml 화면 뷰를 연결
+
 
         //기존 접근 -> 오류
 //        TextView textview = findViewById(R.id.myTextView)
@@ -28,9 +35,14 @@ class SubActivity : AppCompatActivity() {
     //          kotilin-android-extensions을 더이상 제공하지 않을 예정이기에 ViewBinding을 권장하고 있음
         // 뷰결합 -> findViewById를 대체함
 
-
-
-
-
+        //build.gradle에 추가하여 viewbinding 사용
+        //  buildFeatures {
+        //        viewBinding true
+        //    }
    }
+
+    private fun viewBinding(){
+        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
 }
