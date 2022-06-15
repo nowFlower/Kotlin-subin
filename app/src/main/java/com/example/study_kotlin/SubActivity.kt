@@ -24,6 +24,7 @@ class SubActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_sub) // xml 화면 뷰를 연결
 
+        viewBinding()
 
         //기존 접근 -> 오류
 //        TextView textview = findViewById(R.id.myTextView)
@@ -44,5 +45,12 @@ class SubActivity : AppCompatActivity() {
     private fun viewBinding(){
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
+
+    private fun print(){
+        print("값을 입력하세요")
+        val input = readLine()
+
+        print("값은 :${input}")
     }
 }
