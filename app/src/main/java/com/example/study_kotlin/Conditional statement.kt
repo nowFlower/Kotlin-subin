@@ -2,6 +2,7 @@ package com.example.study_kotlin
 
 fun main() {
     checkNum2(1)
+    maxBy(5,7)
 }
 
 //조건문
@@ -11,9 +12,13 @@ fun maxBy(a : Int, b : Int) : Int {
 
     //기본적인 방법
     if(a > b) {
+        println(a)
         return a
+
     }else {
+        println(b)
         return b
+
     }
 }
 //조금더 수월한 방법
